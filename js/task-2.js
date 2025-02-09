@@ -9,50 +9,30 @@
 
 
 
-// class Storage {
-
-// #items;
-
-//   constructor(items) {
-//     this.#items = items;
-//   }
-
-//   getItems(){
-//     return this.#items;
-//   }
-
-//   addItem(newItem){
-//     this.#items.push(newItem);
-
-//   }
-//   removeItem(itemToRemove){
-//     this.#items = this.#items.filter (item => item !== itemToRemove);
-
-//   }
- 
-// } 
-
 class Storage {
-  #items;
+
+#items;
 
   constructor(items) {
     this.#items = items;
   }
 
-  getItems() {
+  getItems(){
     return this.#items;
   }
 
-  addItem(newItem) {
-    console.log(`Додаємо елемент: ${newItem}`); // Лог додавання
+  addItem(newItem){
     this.#items.push(newItem);
-  }
 
-  removeItem(itemToRemove) {
-    console.log(`Видаляємо елемент: ${itemToRemove}`); // Лог видалення
-    this.#items = this.#items.filter(item => item !== itemToRemove);
   }
-}
+  removeItem(itemToRemove){
+    this.#items = this.#items.filter (item => item !== itemToRemove);
+
+  }
+ 
+} 
+
+
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
 
